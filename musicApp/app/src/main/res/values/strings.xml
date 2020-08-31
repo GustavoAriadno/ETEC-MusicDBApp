@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">musicApp</string>
+    <array name="generos">
+        <item>Pop</item>
+        <item>Rock</item>
+        <item>MPB</item>
+        <item>Eletronica</item>
+        <item>Hip Hop</item>
+    </array>
+</resources>

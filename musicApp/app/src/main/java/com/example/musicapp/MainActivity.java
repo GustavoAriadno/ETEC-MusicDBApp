@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -14,7 +17,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     // Variaveis globais
     public static final String NOME_BANCO_DE_DADOS = "musicas.db";
@@ -40,6 +43,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Criando DB
         meuBancoDeDados = openOrCreateDatabase(NOME_BANCO_DE_DADOS, MODE_PRIVATE, null);
+
+        // Colorindo Spinner
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.generos,
+                R.layout.color_spinner_layout
+        );
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        spngeneros.setAdapter(adapter);
+
         // Criar tabela
         criarTabelaMusica();
     }
@@ -109,4 +122,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
 }

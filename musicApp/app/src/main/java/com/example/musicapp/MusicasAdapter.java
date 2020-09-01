@@ -74,10 +74,11 @@ public class MusicasAdapter extends ArrayAdapter<Musicas> {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mCtx);
                 builder.setTitle("Deseja excluir?");
-                builder.setIcon(android.R.drawable.ic_input_delete);
+                builder.setIcon(android.R.drawable.ic_delete);
                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+
                         String sql = "DELETE FROM musicas WHERE id = ?";
                         meuBancoDeDados.execSQL(sql, new Integer[]{musicas.getId()});
                         recarregarMusicasDB();

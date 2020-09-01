@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_main"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -19,48 +20,64 @@
             android:layout_marginBottom="12dp"
             android:gravity="center"
             android:text="Adicionar nova Musica"
+            android:textColor="#ffffff"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
         <EditText
             android:id="@+id/txtNovoNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Entre com o nome do musica" />
+            android:hint="Entre com o nome do musica"
+            android:backgroundTint="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="4dp" />
 
         <EditText
             android:id="@+id/txtNovoArtista"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Entre com o Artista da Musica" />
+            android:hint="Entre com o Artista da Musica"
+            android:backgroundTint="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="4dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingLeft="6dp"
-            android:text="Selecione o genero" />
+            android:text="Selecione o genero"
+            android:textColor="#ffffff"/>
 
         <Spinner
             android:id="@+id/spngenero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/generos" />
+            android:entries="@array/generos"
+            android:backgroundTint="#ffffff"
+            android:layout_marginBottom="24dp"/>
 
         <Button
             android:id="@+id/btnAdicionarMusica"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Adicionar Musica" />
+            android:text="Adicionar Musica"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="@drawable/custom_button"
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:id="@+id/btnVisualizarMusicas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="16dp"
             android:text="Visualizar Musicas"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textStyle="bold" />
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_button"/>
 
     </LinearLayout>
 

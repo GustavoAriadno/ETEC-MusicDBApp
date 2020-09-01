@@ -50,7 +50,8 @@
             android:id="@+id/btnAlterarMusica"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Alterar" />
+            android:text="Alterar"
+            android:layout_marginTop="24dp"/>
 
 
     </LinearLayout>

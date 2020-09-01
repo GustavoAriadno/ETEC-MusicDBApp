@@ -35,7 +35,6 @@ public class MusicasActivity extends AppCompatActivity {
         Cursor cursorMusicas = meuBancoDeDados.rawQuery("SELECT * FROM musicas", null);
 
         if (cursorMusicas.moveToFirst()) {
-            musicasList.clear();
             do {
                 musicasList.add(new Musicas(
                         cursorMusicas.getInt(0),

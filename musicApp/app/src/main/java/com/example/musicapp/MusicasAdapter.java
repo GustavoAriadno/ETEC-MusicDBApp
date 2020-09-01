@@ -1,6 +1,5 @@
 package com.example.musicapp;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
@@ -15,7 +14,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import java.util.List;
 
@@ -36,23 +37,11 @@ public class MusicasAdapter extends ArrayAdapter<Musicas> {
         this.meuBancoDeDados = meuBancoDeDados;
     }
 
-    @Override
-    public int getCount() {
-        return 0;
-    }
 
+    // Inflar layout com MODELO e suas acoes
+    @NonNull
     @Override
-    public Musicas getItem(int i) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, @Nullable View convertView, @Nullable ViewGroup parent) {
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(listaLayoutRes, null);

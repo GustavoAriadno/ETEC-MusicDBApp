@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,7 +75,8 @@ public class MusicasAdapter extends ArrayAdapter<Musicas> {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mCtx);
                 builder.setTitle("Deseja excluir?");
-                builder.setIcon(android.R.drawable.ic_delete);
+
+                builder.setIcon(R.drawable.ic_delete);
                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -92,6 +94,7 @@ public class MusicasAdapter extends ArrayAdapter<Musicas> {
                 });
                 AlertDialog dialog = builder.create();
                 dialog.show();
+                dialog.getWindow().setBackgroundDrawableResource(R.color.colorEndBg);
             }
         });
         return view;
@@ -113,6 +116,15 @@ public class MusicasAdapter extends ArrayAdapter<Musicas> {
         txtEditarArtista.setText(musicas.getArtista());
 
         final AlertDialog dialog = builder.create();
+
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+                mCtx.getApplicationContext(),
+                R.array.generos,
+                R.layout.color_spinner_layout
+        );
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
+        spnGenero.setAdapter(adapter);
+
         dialog.show();
 
         view.findViewById(R.id.btnAlterarMusica).setOnClickListener(new View.OnClickListener() {

@@ -17,6 +17,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:text="Wel wel wel"
+            android:textColor="#ffffff"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -24,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pop"
+            android:textColor="#ffffff"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
         <TextView
@@ -31,12 +33,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MC daleste"
+            android:textColor="#ffffff"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
         <TextView
             android:id="@+id/txtEntradaViewMusica"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#ffffff"
             android:layout_marginTop="8dp"
             android:text="12/08/2019 10:00:00" />
 
@@ -52,15 +56,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/colorPrimary"
-            android:text="Editar" />
+            android:background="@drawable/custom_button"
+            android:text="Editar"
+            android:textColor="#ffffff"/>
 
         <Button
             android:id="@+id/btnExcluirViewMusica"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@color/colorAccent"
-            android:text="Excluir" />
+            android:background="@drawable/custom_button"
+            android:text="Excluir"
+            android:textColor="#ffffff"/>
     </LinearLayout>
 </LinearLayout>
